@@ -1,43 +1,19 @@
-# DepartmentalDashboard: C++ OOP Project
+# Departmental Dashboard (C++)
 
-A C++ project designed to demonstrate object-oriented programming (OOP) principles—including polymorphism, encapsulation, and abstraction—in a context that simulates a real-world company environment. 
+This is a small C++ project I made to practice object-oriented programming (OOP) concepts like classes, inheritance, and polymorphism. The program simulates a simple company dashboard with different teams (like Sales, Engineering, HR, etc.).
 
 While this is a small-scale project, I focused on modeling a departmental dashboard as it might be used in an actual organization, managing teams across Marketing, Sales, Engineering, Human Resources, and Communications. The implementation showcases practical features such as team management, inter-department communication, and detailed team reporting, reflecting how these OOP concepts can be applied to real business scenarios.
 
-## Features
+- **Creates teams for different departments** (Sales, Engineering, HR, Communications, Marketing) using classes and inheritance.
+- **Lets you add members, set budgets, and update locations** for each team.
+- **Shows how polymorphism works** by letting teams communicate with each other using shared methods.
+- **Prints out information** about each team, their members, and their budgets.
+- **Demonstrates namespaces** by organizing code for each department.
 
-- **Teams**: Each department (Marketing, Sales, Engineering, HR, Communications) has its own `Team` class, all inheriting from a common `DepartmentTeamBase` interface.
-- **Namespaces**: Departments are organized using C++ namespaces for modularity and clarity.
-- **Team Management**: Add members, set budgets, update locations, and print detailed team information for each department.
-- **Polymorphic Communication**: Teams communicate with each other using a shared interface, demonstrating polymorphism via virtual functions.
-- **Auditing**: Support namespaces (e.g., `Marketing::Support`) provide functions for auditing and inter-department messaging.
+## Example Output
 
-## OOP Principles
+When you run the program, you’ll see output like this:
 
-- **Polymorphism**: All `Team` classes inherit from `DepartmentTeamBase` and override the `getTeamName()` method, enabling generic functions like `communicateToDeparment()` to work with any team.
-- **Encapsulation**: Team data (name, members, budget, location) is private and accessed via public methods.
-- **Abstraction**: Common operations (e.g., printing team details, communication) are abstracted through base class interfaces and support functions.
-- **Namespaces**: Each department and its support functions are encapsulated in their own namespace for clear separation of concerns.
-
-## Purpose
-
-Developed as part of my C++ learning journey to demonstrate mastery of OOP concepts, namespaces, and modular design. This project showcases my ability to design and implement extensible systems using inheritance, vectors, and polymorphism.
-
-## Project Structure
-
-- `src/` — Source files (e.g., `mainDepartmentalDashboard.cpp`)
-- `include/` — Header files for each department and the base class
-
-## How to Build
-
-```bash
-g++ src/mainDepartmentalDashboard.cpp -I include -o dashboard
-./dashboard
-```
-
-## Sample Output
-
-### Team Details
 ```
 Sales Team Name: Stellar Corp-Sales
 Location: London
@@ -59,9 +35,9 @@ Budget: $60000
 Members: Paul, Stephen, Katy .
 ```
 
-### Inter-Department Communication
+And for communication between teams:
+
 ```
----- Example of using the method communcatedToDepartment() ---
 New message from: Stellar Corp-Marketing
 To: Stellar Corp-Engineering
 Message: "We need information about your upcoming project ASAP"
@@ -75,14 +51,23 @@ To: Stellar Corp-Sales
 Message: "Need update of the current sales of the month, please."
 ```
 
-### Auditing Example
-```
-Auditing Marketing Team: Stellar Corp-Marketing
-Number of Members: 3
-Team Budget: 500000
-Audit complete
-```
+## Why did I make this?
+
+I wanted to get better at using classes, inheritance, and namespaces in C++. This project helped me understand how to organize code for different parts of a program and how to use polymorphism for shared actions.
+
+## How to Run
+
+1. Make sure you have a C++ compiler (like g++) installed.
+2. Compile the code:
+   ```
+   g++ src/mainDepartmentalDashboard.cpp -I include -o dashboard
+   ```
+3. Run the program:
+   ```
+   ./dashboard
+   ```
 
 ## Author
 
-Rodrigo Casio ([View my Github profile](https://github.com/rodrigcasio))
+Rodrigo Casio  
+[My GitHub Profile](https://github.com/rodrigcasio)
